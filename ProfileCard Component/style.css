@@ -159,7 +159,7 @@ main .svg {
     height: 15vh;
     width: 90vh;
     background-image: url("images/bg-pattern-card.svg");
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
   }
   .mainContent {
     display: flex;
@@ -195,19 +195,55 @@ main .svg {
     color: hsl(227, 10%, 46%);
     font-weight: 300;
   }
-}
-.victor {
-  border-radius: 50%;
-  border: 5px solid white;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  margin: 10vh 13vh;
-}
-.theMainBox .sideBarBottom {
-  height: 15vh;
-  width: 90vh;
-  background-color: white;
-  border-radius: 10px;
+  .victor {
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 13vh;
+  }
+  .theMainBox .sideBarBottom {
+    height: 15vh;
+    width: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 100;
+  }
+  .sideBarBottom .content {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content .h1 {
+    font-size: 16px;
+    width: 7vh;
+    margin-top: 3vh;
+    color: black;
+    word-spacing: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+  }
+  .content .h1:nth-of-type(n + 3) {
+    text-transform: uppercase;
+    padding-left: 0px;
+  }
+  .content p {
+    font-size: 12px;
+    color: gray;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 10px;
+  }
+  .testPanel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
