@@ -1,4 +1,3 @@
-
 let userInput = prompt("Enter your choice");
 let acceptedInput = ["new", "list", "delete", "quit"];
 let flag = true;
@@ -20,8 +19,11 @@ while (flag) {
       userInput = prompt("Enter a choice");
       flag = true;
     } else if (userInput === "delete") {
-      let indexInput = prompt("Enter the index of the task you want to delete");
+      let indexInput = parseInt(
+        prompt("Enter the index of the task you want to delete")
+      );
       if (indexInput > Object.values(userTasks).length) {
+        // you can add isNan() can also be used instead of this
         console.log("Invalid , Task does not exist");
         indexInput = prompt("Enter the index of the task you want to delete");
       } else {
